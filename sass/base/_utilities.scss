@@ -1,4 +1,5 @@
 // clearfix for floats
+
 .clearfix::before, .clearfix::after {
     content: '';
     display: table;
@@ -12,21 +13,21 @@
 
 // Background-Color
 
-.back-white {
-    background-color: $color-white;
-}
+.back-white {background-color: $color-white;}
 
-.back-black {
-    background-color: $color-black;
-}
+.back-black {background-color: $color-black;}
 
-.back-aqua {
-    background-color: $color-primary-aqua;
-}
+.back-aqua {background-color: $color-primary-aqua;}
 
-.back-pink {
-    background-color: $color-primary-pink;
-}
+.back-pink {background-color: $color-primary-pink;}
+
+.color-white {color: $color-white;}
+
+.color-black {color: $color-black;}
+
+.color-aqua {color: $color-primary-aqua;}
+
+.color-pink {color: $color-primary-pink;}
 
 // Center
 

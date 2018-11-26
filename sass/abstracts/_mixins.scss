@@ -1,0 +1,25 @@
+@mixin gridSys($max-width, $horizontal-gutter, $vertical-gutter) {
+
+    @extend .clearfix;
+    max-width: $max-width;
+    margin: 0 auto;
+
+    &:not(:last-child) {
+        margin-bottom: $vertical-gutter;
+    }
+
+    [class^="col-"] {
+
+        float: left;
+
+        &:not(:last-child) {
+            margin-right: $horizontal-gutter;
+        }
+
+    }
+
+    @for $i from 1 through 11 {
+        .col-#{$i}-of-12 {width: calc( ( #{$i} * ( ( 100% - 11 * #{$horizontal-gutter} ) / 12 ) ) + ( ( #{$i} - 1 ) * #{$horizontal-gutter} ) ); }
+    }
+
+}

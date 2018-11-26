@@ -8,6 +8,7 @@ header {
     width: 130rem;
     height: 13rem;
     padding-top: 4rem;
+    @extend .clearfix;
 
     &__box {
         width: 50%;
@@ -72,26 +73,34 @@ header {
 
 .header-titulo {
     width: 100%;
-    height: 290px;
-}
-
-
-
-.guia-banner {
-    width: 100%;
-    height: 290px;
-    border-bottom: 20px solid #2DCCD3;
+    height: 29rem;
+    
     position: relative;
+
+    &__heading {
+        position: absolute;
+        bottom: 0;
+        margin: 0;
+        padding: 0;
+        padding-bottom: 20px;
+        text-align: center;
+        width: 100%;
+        font-size: 60px;
+        font-weight: bold;
+    }
+
+    &--aqua {
+        border-bottom: 2rem solid $color-primary-aqua;
+
+        &__heading {color: $color-primary-aqua;}
+    }
+
+    &--pink {
+        border-bottom: 2rem solid $color-primary-pink;
+        
+        &__heading {color: $color-primary-pink;}
+    }
+
 }
-.guia-banner h1 {
-    position: absolute;
-    bottom: 0;
-    margin: 0;
-    padding: 0;
-    padding-bottom: 20px;
-    text-align: center;
-    width: 100%;
-    font-size: 60px;
-    font-weight: bold;
-    color: #2DCCD3;
-}
+
+

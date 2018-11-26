@@ -1,0 +1,11 @@
+.row-default {
+    @include gridSys($grid-width-default, $gutter-horizontal-default, $gutter-vertical-default);
+}
+
+.row-home {
+    @include gridSys($grid-width-home, $gutter-horizontal-home, $gutter-vertical-home);
+}
+
+.row-videos {
+    @include gridSys($grid-width-videos, $gutter-horizontal-videos, $gutter-vertical-videos);
+}
