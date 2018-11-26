@@ -1,7 +1,9 @@
 // COLORS
 
-$primary-color-aqua: #2DCCD3;
-$primary-color-pink: #FC9BB3;
+$color-primary-aqua: #2DCCD3;
+$color-primary-pink: #FC9BB3;
+$color-primary-aqua-light: rgba($color-primary-aqua, .25);
+$color-primary-pink-light: rgba($color-primary-pink, .25);
 
 $color-white: #ffffff;
 $color-black: #000000;
@@ -19,11 +21,11 @@ $gutter-horizontal-default: 6rem;
 // GRID HOME
 
 $grid-width-home: 192rem;
-$gutter-vertical-home: 8rem;
-$gutter-horizontal-home: 6rem;
+$gutter-vertical-home: 0;
+$gutter-horizontal-home: 0;
 
 // GRID VIDEOS
 
 $grid-width-videos: 135rem;
-$gutter-vertical-videos: 8rem;
-$gutter-horizontal-videos: 6rem;
+$gutter-vertical-videos: 3rem;
+$gutter-horizontal-videos: 0;

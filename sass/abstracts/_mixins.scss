@@ -18,8 +18,11 @@
 
     }
 
+    $default-size: (100% - 11 * #{$horizontal-gutter})/12;
     @for $i from 1 through 11 {
-        .col-#{$i}-of-12 {width: calc( ( #{$i} * ( ( 100% - 11 * #{$horizontal-gutter} ) / 12 ) ) + ( ( #{$i} - 1 ) * #{$horizontal-gutter} ) ); }
+        .col-#{$i}-of-12 {
+            width: calc( (#{$i} * ((100% - 11 * #{$horizontal-gutter}) / 12)) + (#{$i} - 1) * #{$horizontal-gutter});
+        }
     }
 
 }

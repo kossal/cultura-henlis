@@ -21,6 +21,10 @@
 
 .back-pink {background-color: $color-primary-pink;}
 
+.back-aqua-light {background-color: $color-primary-aqua-light;}
+
+.back-pink-light {background-color: $color-primary-pink-light;}
+
 .color-white {color: $color-white;}
 
 .color-black {color: $color-black;}
@@ -52,9 +56,23 @@
     text-align: center;
 }
 
+// Margin
+
+.u-margin-top-big {
+    margin-top: 22rem;
+}
+
+.u-margin-bottom-medium {
+    margin-bottom: 7.5rem;
+}
+
+.u-margin-bottom-small {
+    margin-bottom: 4.5rem;
+}
+
 // Seleccionado
 
 .sel-bold {
-    font-size: bold;
+    font-weight: bold;
 }
 
