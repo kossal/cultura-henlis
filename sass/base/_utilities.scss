@@ -33,6 +33,14 @@
 
 .color-pink {color: $color-primary-pink;}
 
+.hover-white:hover {color: $color-white;}
+
+.hover-black:hover {color: $color-black;}
+
+.hover-aqua:hover {color: $color-primary-aqua;}
+
+.hover-pink:hover {color: $color-primary-pink;}
+
 // Center
 
 .u-center-box-hz {
@@ -60,6 +68,14 @@
 
 .u-margin-top-big {
     margin-top: 22rem;
+}
+
+.u-margin-top-medium {
+    margin-top: 7.5rem;
+}
+
+.u-margin-top-small {
+    margin-top: 4.5rem;
 }
 
 .u-margin-bottom-medium {
