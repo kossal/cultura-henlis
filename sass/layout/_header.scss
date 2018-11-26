@@ -30,20 +30,14 @@ header {
 
         &--white {
             color: $color-white;
-        }
 
-        &--white {
-            color: $color-black;
+            &:hover {color: $color-black;}
         }
 
         &--large {
             display: inline-block;
             width: 10rem;
             text-align: center;
-        }
-
-        &--white:hover {
-            color: $color-black;
         }
 
     }
@@ -66,9 +60,90 @@ header {
 }
 
 // Header nav
+/*
+header.cultura-henlis .menu-principal {
+    display: none;
+}
+.color-white nav > ul > li a {
+    color: #fff;
+}
+.color-aqua nav > ul > li a {
+    color: #2DCCD3;
+}
+.selected {
+    font-weight: bold;
+}
+header .menu-principal {
+    width: 900px;
+    height: 102px;
+    margin: 0 auto;
+    position: relative;
+}
+@media only screen and (max-width: 910px) {
+    header .menu-principal {
+        width: 100%;
+    }
+}
+header .menu-principal nav {
+    position: absolute;
+    width: 100%;
+    bottom: 0;
+}
+header .menu-principal nav > ul {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+header .menu-principal nav > ul > li {
+    position: relative;
+    padding: 18px 0;
+}
+header .menu-principal nav > ul > li a {
+    font-size: 22px;
+    transition: color 0.25s ease;
+}
+header .menu-principal nav ul ul {
+    position: absolute;
+    top: 100%;
+    width: 400%;
+    left: -150%;
+    text-align: center;
+    transition: all 0.25s ease;
+    z-index: 100;
+}
+header .menu-principal nav ul ul li {
+    padding-top: 6px;
+}
+header .menu-principal nav ul ul:first-child {
+    padding-top: 12px;
+}
 
+header .menu-principal nav ul ul li a {
+    color: #000000;
+    font-size: 22px;
+    transition: all 0.25s ease;
+}
+*/
+/* Transiciones y efectos del Menu Principal */
+/*
+header .menu-principal nav ul ul {
+    visibility: hidden;
+    opacity: 0;
+    transform: translateY(15%);
+}
+header .menu-principal nav ul li:hover > ul {
+    visibility: visible;
+    transform: translateY(0);
+    opacity: 1;
+}
 
-
+header .menu-principal nav > ul > li a:hover {
+    color: #000000;
+}
+header .menu-principal nav ul ul li a:hover {
+    color: #FC9BB3;
+}
+*/
 // Header Titulo
 
 .header-titulo {

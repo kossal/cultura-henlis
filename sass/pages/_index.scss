@@ -1,0 +1,45 @@
+.cultura-henlis {
+    margin-top: 13rem;
+    width: 100%;
+
+    &__box {
+        width: 90rem;
+        margin: 0 auto;
+    }
+
+    &__heading {
+        font-size: 4rem;
+        font-weight: bold;
+        color: $color-white;
+        text-align: center;
+    }
+
+    &__paragraph {
+        font-size: 2rem4px;
+        font-weight: normal;
+        color: $color-white;
+        line-height: 135%;
+        text-align: center;
+    }
+
+    &__volver {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+    }
+
+    &__btn {
+        display: inline-block;
+        width: 1.5rem;
+        height: 1.5rem;
+        border-radius: 100%;
+        background-color: $color-white;
+        margin: 0 .5rem;
+        transition: all 0.2s;
+
+        &:hover {
+            background-color: rgba($color-white, .75);
+        }
+    }
+    
+}
