@@ -1,0 +1,59 @@
+// clearfix for floats
+.clearfix::before, .clearfix::after {
+    content: '';
+    display: table;
+}
+.clearfix::after {
+    clear: both;
+}
+.clearfix::after {
+    zoom: 1;
+}
+
+// Background-Color
+
+.back-white {
+    background-color: $color-white;
+}
+
+.back-black {
+    background-color: $color-black;
+}
+
+.back-aqua {
+    background-color: $color-primary-aqua;
+}
+
+.back-pink {
+    background-color: $color-primary-pink;
+}
+
+// Center
+
+.u-center-box-hz {
+    margin: 0 auto;
+}
+
+.u-center-box-vt {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.u-center-box {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.u-center-text {
+    text-align: center;
+}
+
+// Seleccionado
+
+.sel-bold {
+    font-size: bold;
+}
+
