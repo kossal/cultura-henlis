@@ -112,7 +112,7 @@ body {
   background-color: rgba(45, 204, 211, 0.25);
 }
 
-.back-pink-light, .section-home:nth-child(2n+1) .section-home__individual--text {
+.back-pink-light {
   background-color: rgba(252, 155, 179, 0.25);
 }
 
@@ -557,6 +557,58 @@ header {
   color: #FC9BB3;
 }
 
+.section-videos {
+  width: 135rem;
+  height: 38rem;
+  margin: 0 auto;
+  padding-bottom: 3rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  color: #000000;
+}
+
+.section-videos:last-child {
+  padding-bottom: 0;
+}
+
+.section-videos__individuales {
+  width: 50%;
+}
+
+.section-videos__individuales--text {
+  background-color: rgba(45, 204, 211, 0.25);
+}
+
+.section-videos__text {
+  padding: 3rem 5rem 0 10rem;
+  width: 100%;
+  height: 100%;
+}
+
+.section-videos__heading {
+  font-size: 4rem;
+  font-weight: bold;
+  margin-bottom: 4.5rem;
+}
+
+.section-videos__paragraph {
+  font-size: 3rem;
+  font-weight: bold;
+  margin-bottom: 4.5rem;
+}
+
+.section-videos__link {
+  font-size: 2.2rem;
+  font-weight: normal;
+  color: #000000;
+}
+
+.section-videos__iframe {
+  width: 100%;
+  height: 100%;
+}
+
 .articulo-guia {
   width: 110rem;
   margin: 0 auto;
@@ -617,7 +669,7 @@ header {
   text-transform: uppercase;
   margin-bottom: 4.5rem;
   display: inline-block;
-  width: 53rem;
+  max-width: 100rem;
 }
 
 .section-home__paragraph {
@@ -630,6 +682,10 @@ header {
   font-size: 2.2rem;
   font-weight: bold;
   color: #000000;
+}
+
+.section-home:nth-child(2n+1) .section-home__individual--text {
+  background-color: rgba(252, 155, 179, 0.25);
 }
 
 .cultura-henlis {

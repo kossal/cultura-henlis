@@ -26,7 +26,7 @@
         text-transform: uppercase;
         margin-bottom: 4.5rem;
         display: inline-block;
-        width: 53rem;
+        max-width: 100rem;
     }
 
     &__paragraph {
@@ -42,7 +42,7 @@
     }
 
     &:nth-child(2n+1) &__individual--text {
-        @extend .back-pink-light;
+        background-color: $color-primary-pink-light;
     }
 
 }
