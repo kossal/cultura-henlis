@@ -1,8 +1,8 @@
 var gulp = require('gulp'),
     watch = require('gulp-watch'),
-    browserSync = require('browser-sync');
+    browserSync = require('browser-sync').create();
 
-gulp.task('watch', function(){
+gulp.task('watch', ['styles'], function(){
 
     browserSync.init({
         notify: false,
@@ -11,11 +11,11 @@ gulp.task('watch', function(){
         }
     });
 
-    watch('./page/**/*.html', function(){
+    watch('./page/**/*.html', function() {
         gulp.start('html');
     });
 
-    watch('./page/sass/**/*.scss', function(){
+    watch('./page/sass/**/*.scss', function() {
         gulp.start('cssInject');
     });
 
@@ -27,5 +27,5 @@ gulp.task('html', function() {
 
 gulp.task('cssInject', ['styles'], function() {
     return gulp.src('./page/css/estilos.min.css')
-    .pipe(browserSync.stream());
+        .pipe(browserSync.stream());
 });

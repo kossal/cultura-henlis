@@ -17,16 +17,17 @@
   },
   "homepage": "https://github.com/Zuri97/Cultura-Henlis#readme",
   "dependencies": {
-    "jquery": "^3.3.1",
-    "normalize": "^0.3.1"
+    "jquery": "^3.3.1"
   },
   "devDependencies": {
     "browser-sync": "^2.26.3",
     "gulp": "^3.9.1",
     "gulp-autoprefixer": "^6.0.0",
+    "gulp-cssimport": "^7.0.0",
     "gulp-cssnano": "^2.1.3",
     "gulp-rename": "^1.4.0",
     "gulp-sass": "^4.0.2",
-    "gulp-watch": "^5.0.1"
+    "gulp-watch": "^5.0.1",
+    "normalize.css": "^8.0.1"
   }
 }
