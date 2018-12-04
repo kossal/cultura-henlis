@@ -80,4 +80,7 @@ typings/
 # FuseBox cache
 .fusebox/
 
+# FTP Settings
+ftp_settings.js
+
 # End of https://www.gitignore.io/api/node
