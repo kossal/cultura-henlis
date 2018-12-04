@@ -1,10 +1,12 @@
 .cultura-henlis {
     margin-top: 13rem;
+    margin-bottom: 3rem;
     width: 100%;
 
     &__box {
-        width: 90rem;
+        max-width: 93rem;
         margin: 0 auto;
+        padding: 0 1.5rem;
     }
 
     &__heading {
@@ -20,6 +22,11 @@
         color: $color-white;
         line-height: 135%;
         text-align: center;
+
+        @include respond(phone-small) {
+            text-align: left;
+        }
+
     }
 
     &__volver {

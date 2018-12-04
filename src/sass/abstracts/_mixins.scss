@@ -1,28 +1,104 @@
-@mixin gridSys($max-width, $horizontal-gutter, $vertical-gutter) {
+//Media Query Manager
+/*
+0 - 375px:          Phone small
+375 - 600px:        Phone
+600px - 900px:      Tablet portrait
+900px - 1000px:     Tablet
+1000px - 1200px:    Tablet landscape
+1200px - 1400px:    Normal
+1400px - :          Big desktop
 
-    @extend .clearfix;
-    max-width: $max-width;
-    margin: 0 auto;
+$breakpoint argument choices:
+- phone-small
+- phone
+- tab-port
+- tab
+- tab-land
+- big-desk
+*/
 
-    &:not(:last-child) {
-        margin-bottom: $vertical-gutter;
+@mixin respond ($breakpoint) {
+    
+    @if $breakpoint == phone-small {
+
+        @media only screen and (max-width: 23.4375em){@content;} //375px
+
+    } @else if $breakpoint == phone {
+
+        @media only screen and (max-width: 37.5em){@content;} //600px
+
+    } @else if $breakpoint == tab-port {
+
+        @media only screen and (max-width: 56.25em){@content;} //900px
+
+    }@else if $breakpoint == tab {
+
+        @media only screen and (max-width: 62.5em){@content;} //1000px
+
+    } @else if $breakpoint == tab-land {
+
+        @media only screen and (max-width: 75em){@content;} //1200px
+
+    } @else if $breakpoint == big-desk {
+
+        @media only screen and (max-width: 87.5em){@content;} //1400px
+
+    } @else {
+
+        @warn Los argumentos de respond estan mal escritos;
+        @debug Tu argumento $breakpoint no es igual a phone, tab-port, tab-land o big-desk;
+        
     }
 
-    [class^="col-"] {
+}
 
-        float: left;
+// Clearfix
 
-        &:not(:last-child) {
-            margin-right: $horizontal-gutter;
+@mixin clearfix {
+
+    &::before, &::after {
+        content: '';
+        display: block;
+    }
+
+    &::after {
+        clear: both;
+    }
+
+    &::after {
+        zoom: 1;
+    }
+
+}
+
+// Grid
+
+@mixin grid($from, $to, $hzGutter: 0) {
+
+    @for $i from $from to $to + 1 {
+
+        .col-#{$i}-of-#{$to} {
+            width: calc( #{$i} * ( ( 100% - (#{$to} - 1) * #{$hzGutter} ) / #{$to} ) + (#{$i} - 1) * #{$hzGutter} );
         }
 
     }
 
-    $default-size: (100% - 11 * #{$horizontal-gutter})/12;
-    @for $i from 1 through 11 {
-        .col-#{$i}-of-12 {
-            width: calc( (#{$i} * ((100% - 11 * #{$horizontal-gutter}) / 12)) + (#{$i} - 1) * #{$horizontal-gutter});
+}
+
+@mixin gridSmall($from, $to) {
+
+    @for $i from $from to $to + 1 {
+
+        .col-#{$i}-of-#{$to} {
+            width: 100%;
         }
+
     }
 
+}
+
+// Center parent relative with child absolute
+
+@mixin centerAbs($hijo) {
+    left: calc( 50% - #{$hijo} / 2 );
 }
