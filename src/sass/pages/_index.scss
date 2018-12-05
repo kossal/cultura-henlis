@@ -37,12 +37,17 @@
 
     &__btn {
         display: inline-block;
-        width: 1.5rem;
-        height: 1.5rem;
+        width: 2rem;
+        height: 2rem;
         border-radius: 100%;
         background-color: $color-white;
         margin: 0 .5rem;
         transition: all 0.2s;
+
+        @include respond(phone) {
+            width: 2.5rem;
+            height: 2.5rem;
+        }
 
         &:hover {
             background-color: rgba($color-white, .75);

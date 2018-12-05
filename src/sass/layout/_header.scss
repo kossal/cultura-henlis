@@ -211,7 +211,7 @@ header {
         visibility: hidden;
         opacity: 0;
         transform: translateY(9999px);
-        z-index: 103;
+        z-index: 101;
     }
 
     &__box {
@@ -220,7 +220,7 @@ header {
         display: flex;
         flex-wrap: wrap;
         justify-content: space-between;
-        z-index: 102;
+        z-index: 101;
 
         @include respond(tab) {
             width: 100%;
@@ -291,7 +291,7 @@ header {
 
     }
 
-    &__link:hover + &__box--sub {
+    &__box--li:hover &__box--sub {
         visibility: visible;
         opacity: 1;
         transform: translateY(0);

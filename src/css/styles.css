@@ -942,7 +942,7 @@ header {
     opacity: 0;
     -webkit-transform: translateY(9999px);
             transform: translateY(9999px);
-    z-index: 103;
+    z-index: 101;
   }
 }
 
@@ -957,7 +957,7 @@ header {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  z-index: 102;
+  z-index: 101;
 }
 
 @media only screen and (max-width: 62.5em) {
@@ -1038,7 +1038,7 @@ header {
   }
 }
 
-.header-nav__link:hover + .header-nav__box--sub {
+.header-nav__box--li:hover .header-nav__box--sub {
   visibility: visible;
   opacity: 1;
   -webkit-transform: translateY(0);
@@ -1046,7 +1046,7 @@ header {
 }
 
 @media only screen and (max-width: 50em) {
-  .header-nav__link:hover + .header-nav__box--sub {
+  .header-nav__box--li:hover .header-nav__box--sub {
     display: block;
   }
 }
@@ -1358,13 +1358,20 @@ header {
 
 .cultura-henlis__btn {
   display: inline-block;
-  width: 1.5rem;
-  height: 1.5rem;
+  width: 2rem;
+  height: 2rem;
   border-radius: 100%;
   background-color: #ffffff;
   margin: 0 .5rem;
   -webkit-transition: all 0.2s;
   transition: all 0.2s;
+}
+
+@media only screen and (max-width: 37.5em) {
+  .cultura-henlis__btn {
+    width: 2.5rem;
+    height: 2.5rem;
+  }
 }
 
 .cultura-henlis__btn:hover {
