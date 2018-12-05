@@ -1,0 +1,9 @@
+.main-videos {
+    margin-top: 22rem;
+    margin-bottom: 4.5rem;
+
+    @include respond(tab-mini) {
+        margin-top: 8rem;
+    }
+
+}

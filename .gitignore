@@ -83,4 +83,7 @@ typings/
 # FTP Settings
 ftp_settings.js
 
+# Distribution folder
+dist/
+
 # End of https://www.gitignore.io/api/node

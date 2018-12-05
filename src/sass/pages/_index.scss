@@ -3,6 +3,10 @@
     margin-bottom: 3rem;
     width: 100%;
 
+    @include respond(tab-mini) {
+        margin-top: 8rem;
+    }
+
     &__box {
         max-width: 93rem;
         margin: 0 auto;
@@ -14,6 +18,11 @@
         font-weight: bold;
         color: $color-white;
         text-align: center;
+
+        @include respond(phone-small) {
+            text-align: left;
+        }
+
     }
 
     &__paragraph {
@@ -22,6 +31,10 @@
         color: $color-white;
         line-height: 135%;
         text-align: center;
+
+        @include respond(tab) {
+            font-weight: normal;
+        }
 
         @include respond(phone-small) {
             text-align: left;
