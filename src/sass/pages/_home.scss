@@ -32,11 +32,6 @@
 
     &__text {
         max-width: 53rem;
-
-        @include respond(tab) {
-            margin: 0 auto;
-        }
-
     }
 
     &__heading {

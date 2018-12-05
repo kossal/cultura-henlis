@@ -2,7 +2,8 @@
 /*
 0 - 375px:          Phone small
 375 - 600px:        Phone
-600px - 900px:      Tablet portrait
+600px - 800px:      Tablet mini
+800px - 900:        Tablet portrait
 900px - 1000px:     Tablet
 1000px - 1200px:    Tablet landscape
 1200px - 1400px:    Normal
@@ -11,6 +12,7 @@
 $breakpoint argument choices:
 - phone-small
 - phone
+- tab-mini
 - tab-port
 - tab
 - tab-land
@@ -26,6 +28,10 @@ $breakpoint argument choices:
     } @else if $breakpoint == phone {
 
         @media only screen and (max-width: 37.5em){@content;} //600px
+
+    } @else if $breakpoint == tab-mini {
+
+        @media only screen and (max-width: 50em){@content;} //800px
 
     } @else if $breakpoint == tab-port {
 

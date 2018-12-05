@@ -2,6 +2,108 @@ header {
     width: 100%;
 }
 
+// Header Wrapper
+
+.header-checkbox {
+    display: none;
+}
+
+@include respond(tab-mini) {
+
+    .header-checkbox {
+
+        &:checked ~ .header-label .header-label__span {
+            background-color: transparent;
+            position: fixed;
+
+            &::before {
+                top: 0;
+                transform: rotate(-135deg);
+            }
+
+            &::after {
+                top: 0;
+                transform: rotate(135deg);
+            }
+
+        }
+
+        &:checked ~ .header-wrapper {
+            height: 100vh;
+            opacity: 1;
+        }
+
+        &:checked ~ .header-barra {
+            opacity: 1;
+            transform: translateX(0);
+            position: fixed;
+        }
+
+        &:checked ~ .header-nav {
+            visibility: visible;
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+    }
+
+    .header-label {
+        position: absolute;
+        top: 4rem;
+        right: 4rem;
+        display: block;
+        z-index: 101;
+        
+        &__span {
+            position: relative;
+            
+            &, &::before, &::after {
+                display: block;
+                width: 2.5rem;
+                height: 2px;
+                background-color: $color-white;
+                z-index: 102;
+            }
+
+            &::before, &::after {
+                content: '';
+                position: absolute;
+                transition: all .2s;
+            }
+
+            &::before {
+                top: -1rem;
+            }
+
+            &::after {
+                top: 1rem;
+            }
+
+        }
+    }
+
+    .header-wrapper {
+        width: 100%;
+        height: 0;
+        position: fixed;
+        top: 0;
+        z-index: 100;
+        opacity: 0;
+        transition: all .4s;
+
+        &--pink {
+            background-color: rgba($color-primary-pink, .95);
+        }
+
+        &--aqua {
+            background-color: rgba($color-primary-aqua, .95);
+        }
+
+    }
+
+}
+
+
 // Header Bara 
 
 .header-barra {
@@ -10,6 +112,8 @@ header {
     padding: 4rem 1rem 0 1rem;
     @extend .clearfix;
     margin: 0 auto;
+    z-index: 2;
+    transition: all .2s;
 
     &__box {
         width: 50%;
@@ -21,13 +125,23 @@ header {
 
         &--right {
             text-align: right;
+
+            @include respond(tab-mini) {
+                text-align: left;
+            }
+        }
+
+        @include respond(tab-mini) {
+            float: none;
+            width: 100%;
+            padding-bottom: 1em;
         }
 
     }
 
     &__link {
         font-size: 2.4rem;
-        transition: all 0.25s;
+        transition: all 0.4s 0.2s;
 
         &--white {
             color: $color-white;
@@ -39,8 +153,26 @@ header {
             display: inline-block;
             width: 8.5rem;
             text-align: center;
+
+            @include respond(tab-mini) {
+                display: block;
+                width: auto;
+                text-align: left;
+            }
+
         }
 
+    }
+
+    @include respond(tab-mini) {
+        position: absolute;
+        top: 0;
+        left: 0;
+        padding-top: 3rem;
+        padding-left: 3rem;
+        z-index: 101;
+        opacity: 0;
+        transform: translateX(-9999px);
     }
 
 }
@@ -49,7 +181,6 @@ header {
 
 .header-logo {
     width: 100%;
-    max-height: 13rem;
     margin-bottom: 3.93rem;
 
     &__img {
@@ -59,13 +190,29 @@ header {
         margin: 0 auto;
     }
 
+    @include respond(tab-mini) {
+        padding-top: 6.5rem;
+        margin-bottom: 0;
+        padding-bottom: 6.5rem;
+    }
+
 }
 
 // Header nav
 
 .header-nav {
     width: 100%;
-    position: relative;
+    transition: all .3s .1s;
+
+    @include respond(tab-mini) {
+        position: fixed;
+        top: 10rem;
+        left: 0;
+        visibility: hidden;
+        opacity: 0;
+        transform: translateY(9999px);
+        z-index: 103;
+    }
 
     &__box {
         width: 90rem;
@@ -73,7 +220,18 @@ header {
         display: flex;
         flex-wrap: wrap;
         justify-content: space-between;
-        z-index: 1;
+        z-index: 102;
+
+        @include respond(tab) {
+            width: 100%;
+            margin: 0 0;
+        }
+
+        @include respond(tab-mini) {
+            width: auto;
+            margin: 0 0;
+            display: block;
+        }
 
         &--li {
             position: relative;
@@ -85,7 +243,7 @@ header {
             position: absolute;
             top: 100%;
             text-align: center;
-            z-index: 2;
+            z-index: 102;
             transition: all .2s;
             transform: translateY(25%);
             $width: 175%;
@@ -93,15 +251,12 @@ header {
 
             @include centerAbs($width);
 
-            @include respond(tab) {
-                background-color: rgba($color-white, .4);
+            @include respond(tab-mini) {
+                display: none;
+                transform: translateY(0);
+                width: 100%;
+                position: static;
             }
-
-        }
-
-        @include respond(tab) {
-            width: 100%;
-            margin: 0 0;
         }
 
     }
@@ -115,13 +270,23 @@ header {
         vertical-align: middle;
         transition: all .2s;
 
+        @include respond(tab-mini) {
+            display: block;
+        }
+
         &--sub {
-            padding-top: 0.5rem;
+            padding-top: .5rem;
             color: $color-black;
             font-size: 2.2rem;
             text-align: center;
             transition: all .2s;
             display: inline-block;
+
+            @include respond(tab-mini) {
+                padding-top: 2rem; 
+                display: block;
+            }
+
         }
 
     }
@@ -130,6 +295,10 @@ header {
         visibility: visible;
         opacity: 1;
         transform: translateY(0);
+
+        @include respond(tab-mini) {
+            display: block;
+        }
     }
 
 }
