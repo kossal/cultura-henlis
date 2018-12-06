@@ -31,6 +31,16 @@ const deployFTP = () => {
         
 };
 
+const ForcedeployFTP = () => {
+
+    // using base = '.' will transfer everything to /public_html correctly
+        // turn off buffering in gulp.src for best performance
+    
+        return src( srcDir.globs, {base: srcDir.base, buffer: false})
+            .pipe( conn.dest( '.' ) );
+        
+};
+
 const deploy = series(dist, deployFTP);
 
-export {deploy};
+export {deploy, ForcedeployFTP};

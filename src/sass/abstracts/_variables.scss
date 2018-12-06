@@ -7,6 +7,7 @@ $color-primary-pink-light: rgba($color-primary-pink, .25);
 
 $color-white: #ffffff;
 $color-black: #000000;
+$color-grey: #577083;
 
 // DEGAULT FONT SIZE
 
@@ -19,14 +20,9 @@ $gutter-vertical: 8rem;
 $gutter-vertical-small: 8rem;
 $gutter-horizontal: 6rem;
 
-// GRID HOME
+// GRID KIOSKO
 
-$grid-width-home: 192rem;
-$gutter-vertical-home: 0;
-$gutter-horizontal-home: 0;
-
-// GRID VIDEOS
-
-$grid-width-videos: 135rem;
-$gutter-vertical-videos: 3rem;
-$gutter-horizontal-videos: 0;
+$grid-width-kiosko: 114rem;
+$gutter-vertical-kiosko: 8rem;
+$gutter-vertical-small-kiosko: 8rem;
+$gutter-horizontal-kiosko: 6rem;

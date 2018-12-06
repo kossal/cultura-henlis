@@ -1,0 +1,113 @@
+.kiosko-box {
+    max-width: 109rem;
+    display: inline-block;
+    flex-wrap: wrap;
+    justify-content: left;
+    $left-padding: 1.25rem;
+    text-align: left;
+
+    @include respond(tab) {
+        max-width: 73rem;
+    }
+
+    @media only screen and (max-width: 42.1875em) {
+        max-width: 36rem;
+    }
+
+    span {
+        display: block;
+    }
+
+    &__card {
+        box-sizing: content-box;
+        text-align: left;
+        position: relative;
+        display: inline-block;
+        width: 30rem;
+        height: 50rem;
+        background-color: $color-white;
+        box-shadow: 0 2rem 4rem rgba($color-black, .2);
+        margin: 0 3rem 6rem 3rem;
+    }
+
+    &__img {
+        width: 100%;
+        height: 22.5rem;
+    }
+
+    &__product-name {
+        padding: 3rem $left-padding 0 $left-padding; 
+        font-size: 2.5rem;
+        font-weight: bold;
+        color: $color-primary-aqua;
+        text-transform: uppercase;
+    }
+
+    &__inferior-box {
+        position: absolute;
+        bottom: 4rem;
+        width: 100%;
+
+        & > * {
+            padding-left: $left-padding;
+        }
+
+        & > *:not(:last-child) {
+            padding-bottom: .5rem;
+        }
+
+    }
+
+    &__span {
+        font-size: 1.3rem;
+        font-weight: normal;
+        color: $color-grey;
+
+        &--disponibilidad {
+            padding-top: 2rem;
+        }
+    }
+
+    &__precio {
+        font-size: 2rem;
+        font-weight: normal;
+
+        &--aqua {
+            color: $color-primary-aqua;
+        }
+
+        &--pink {
+            color: $color-primary-pink;
+        }
+
+    }
+
+    &__btn {
+        display: block;
+        position: absolute;
+        bottom: 4rem;
+        right: $left-padding;
+
+        &, &:link, &:visited {
+            font-size: 2.5rem;
+            color: $color-primary-pink;
+            padding: .8rem 3.2rem;
+            border-bottom: 2px solid $color-primary-pink;
+            transition: all .25s;
+        }
+
+        &:hover {
+            color: $color-white;
+            background-color: $color-primary-pink;
+            transform: translateY(-3px);
+            box-shadow: 0 1rem 2rem rgba($color-black, .2);
+        }
+
+        &:active, &:focus {
+            transform: translateY(-1px);
+            box-shadow: 0 .5rem 1rem rgba($color-black, .2);
+        }
+
+    }
+
+}

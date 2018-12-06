@@ -5,6 +5,7 @@
 
     @include respond(tab-mini) {
         margin-top: 8rem;
+        margin-bottom: 10rem;
     }
 
     &__box {
@@ -58,8 +59,8 @@
         transition: all 0.2s;
 
         @include respond(phone) {
-            width: 2.5rem;
-            height: 2.5rem;
+            width: 3rem;
+            height: 3rem;
         }
 
         &:hover {

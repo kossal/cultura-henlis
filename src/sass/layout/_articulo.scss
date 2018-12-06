@@ -1,0 +1,35 @@
+.articulo {
+    max-width: 113rem;
+    margin: 0 auto;
+    padding: 4.5rem 1.5rem;
+
+    & > [class^="articulo__"]:not(:last-child) {
+        padding-bottom: 4.5rem;
+    } 
+
+    &__tertiary {
+        font-size: 2.4rem;
+        font-weight: normal;
+        padding-bottom: 4.5rem;
+
+        &--aqua {
+            color: $color-primary-aqua;
+        }
+
+        &--pink {
+            color: $color-primary-pink;
+        }
+
+    }
+
+    &__paragraph {
+        font-size: 2.2rem;
+        font-weight: normal;
+        padding-bottom: 4.5rem; 
+    }
+
+    &__img {
+        width: 100%;
+    }
+
+}
