@@ -37,9 +37,23 @@
 
 .hover-black:hover {color: $color-black;}
 
-.hover-aqua:hover {color: $color-primary-aqua;}
+.hover-aqua:hover {
+    color: $color-primary-aqua;
 
-.hover-pink:hover {color: $color-primary-pink;}
+    @include respond(tab-mini) {
+        color: $color-black;
+    }
+
+}
+
+.hover-pink:hover {
+    color: $color-primary-pink;
+
+    @include respond(tab-mini) {
+        color: $color-black;
+    }
+
+}
 
 // Center
 

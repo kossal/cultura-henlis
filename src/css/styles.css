@@ -405,7 +405,8 @@ template {
 /*
 0 - 375px:          Phone small
 375 - 600px:        Phone
-600px - 800px:      Tablet mini
+600px - 675px:      Phone big
+675px - 800px:      Tablet mini
 800px - 900:        Tablet portrait
 900px - 1000px:     Tablet
 1000px - 1200px:    Tablet landscape
@@ -415,6 +416,7 @@ template {
 $breakpoint argument choices:
 - phone-small
 - phone
+- phone-big
 - tab-mini
 - tab-port
 - tab
@@ -533,8 +535,20 @@ body {
   color: #2DCCD3;
 }
 
+@media only screen and (max-width: 50em) {
+  .hover-aqua:hover {
+    color: #000000;
+  }
+}
+
 .hover-pink:hover {
   color: #FC9BB3;
+}
+
+@media only screen and (max-width: 50em) {
+  .hover-pink:hover {
+    color: #000000;
+  }
 }
 
 .u-center-box-hz {
@@ -616,7 +630,6 @@ body {
 .kiosko-box__card {
   -webkit-box-sizing: content-box;
           box-sizing: content-box;
-  text-align: left;
   position: relative;
   width: 30rem;
   height: 50rem;
@@ -624,6 +637,15 @@ body {
   -webkit-box-shadow: 0 2rem 4rem rgba(0, 0, 0, 0.2);
           box-shadow: 0 2rem 4rem rgba(0, 0, 0, 0.2);
   margin: 0 3rem 6rem 3rem;
+  -webkit-transition: all .2s;
+  transition: all .2s;
+}
+
+@media only screen and (min-width: 75em) {
+  .kiosko-box__card:hover {
+    -webkit-transform: translateY(-0.5rem) scale(1.025);
+            transform: translateY(-0.5rem) scale(1.025);
+  }
 }
 
 .kiosko-box__img {

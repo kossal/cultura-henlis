@@ -11,7 +11,7 @@
         max-width: 72rem;
     }
 
-    @media only screen and (max-width: 42.1875em) {
+    @include respond(phone-big) {
         max-width: 36rem;
     }
 
@@ -21,13 +21,22 @@
 
     &__card {
         box-sizing: content-box;
-        text-align: left;
         position: relative;
         width: 30rem;
         height: 50rem;
         background-color: $color-white;
         box-shadow: 0 2rem 4rem rgba($color-black, .2);
         margin: 0 3rem 6rem 3rem;
+        transition: all .2s;
+
+        @include respond-max(tab-land) {
+
+            &:hover {
+                transform: translateY(-.5rem) scale(1.025);
+            }
+
+        }
+
     }
 
     &__img {
