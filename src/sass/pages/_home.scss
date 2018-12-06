@@ -1,6 +1,6 @@
 .main-home {
     margin-top: 22rem;
-    margin-bottom: 4.5rem;
+    margin-bottom: 8rem;
 
     @include respond(tab-mini) {
         margin-top: 8rem;
@@ -9,10 +9,10 @@
 }
 
 .section-home {
-    max-width: 256rem;
+    max-width: 192rem;
     margin: 0 auto;
     display: flex;
-
+    
     @include respond(tab) {
         display: block;
     }

@@ -1,13 +1,14 @@
 .kiosko-box {
-    max-width: 109rem;
-    display: inline-block;
+    max-width: 108rem;
     flex-wrap: wrap;
+    display: flex;
     justify-content: left;
+    margin: 0 auto;
+
     $left-padding: 1.25rem;
-    text-align: left;
 
     @include respond(tab) {
-        max-width: 73rem;
+        max-width: 72rem;
     }
 
     @media only screen and (max-width: 42.1875em) {
@@ -22,7 +23,6 @@
         box-sizing: content-box;
         text-align: left;
         position: relative;
-        display: inline-block;
         width: 30rem;
         height: 50rem;
         background-color: $color-white;

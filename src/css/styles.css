@@ -585,19 +585,21 @@ body {
 }
 
 .kiosko-box {
-  max-width: 109rem;
-  display: inline-block;
+  max-width: 108rem;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   -webkit-box-pack: left;
       -ms-flex-pack: left;
           justify-content: left;
-  text-align: left;
+  margin: 0 auto;
 }
 
 @media only screen and (max-width: 62.5em) {
   .kiosko-box {
-    max-width: 73rem;
+    max-width: 72rem;
   }
 }
 
@@ -616,7 +618,6 @@ body {
           box-sizing: content-box;
   text-align: left;
   position: relative;
-  display: inline-block;
   width: 30rem;
   height: 50rem;
   background-color: #ffffff;
@@ -723,39 +724,38 @@ body {
   padding-bottom: 4.5rem;
 }
 
-.articulo__tertiary--aqua {
-  color: #2DCCD3;
-}
-
-.articulo__tertiary--pink {
-  color: #FC9BB3;
-}
-
 .articulo__paragraph {
   font-size: 2.2rem;
   font-weight: normal;
   padding-bottom: 4.5rem;
+  color: #000000;
 }
 
 .articulo__img {
   width: 100%;
 }
 
+.articulo--aqua {
+  color: #2DCCD3;
+}
+
+.articulo--pink {
+  color: #FC9BB3;
+}
+
 .footer {
   width: 100%;
   height: 11rem;
   position: relative;
-}
-
-@media only screen and (max-width: 37.5em) {
-  .footer {
-    height: 13rem;
-  }
+  /*@include respond(phone) {
+        height: 13rem;
+    }*/
 }
 
 .footer__paragraph {
+  padding: 1.5rem;
   font-size: 2.4rem;
-  max-width: 58rem;
+  width: 100%;
   text-align: center;
 }
 
@@ -1075,7 +1075,7 @@ header {
 
 @media only screen and (max-width: 50em) {
   .header-logo {
-    padding: 2.625rem 0 2rem 0;
+    padding: 2.625rem 0 2rem 1.5rem;
     margin-bottom: 0;
     width: 30%;
   }
@@ -1406,7 +1406,7 @@ header {
 
 .main-home {
   margin-top: 22rem;
-  margin-bottom: 4.5rem;
+  margin-bottom: 8rem;
 }
 
 @media only screen and (max-width: 50em) {
@@ -1416,7 +1416,7 @@ header {
 }
 
 .section-home {
-  max-width: 256rem;
+  max-width: 192rem;
   margin: 0 auto;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1589,7 +1589,6 @@ header {
 
 .main-kiosko {
   margin: 15rem 0;
-  text-align: center;
 }
 
 @media only screen and (max-width: 62.5em) {
@@ -1608,7 +1607,7 @@ header {
 
 .main-videos {
   margin-top: 22rem;
-  margin-bottom: 4.5rem;
+  margin-bottom: 15rem;
 }
 
 @media only screen and (max-width: 50em) {

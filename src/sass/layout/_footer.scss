@@ -3,13 +3,14 @@
     height: 11rem;
     position: relative;
 
-    @include respond(phone) {
+    /*@include respond(phone) {
         height: 13rem;
-    }
+    }*/
 
     &__paragraph {
+        padding: 1.5rem;
         font-size: 2.4rem;
-        max-width: 58rem;
+        width: 100%;
         text-align: center;
     }
 }
